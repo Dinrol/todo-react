@@ -1,0 +1,94 @@
+@import "nullstyle";
+
+body {
+  background-color: #ff505f;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 50px auto 0;
+}
+
+.todo {
+  position: relative;
+
+  &__header {
+    h1 {
+      color: white;
+      font-size: 48px;
+      text-align: center;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  &__add-task {
+    display: flex;
+    margin-bottom: 40px;
+
+    input {
+      flex: 1;
+      font-size: 22px;
+      padding: 0 15px;
+    }
+
+    button {
+      width: 103px;
+      font-size: 22px;
+      padding: 20px;
+      background-color: aqua;
+    }
+  }
+
+  &__task-list {
+    margin-bottom: 20px;
+  }
+
+  &__clear-tasks-btn {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    width: 103px;
+  }
+}
+
+.task-list {
+  background-color: #fff;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    padding: 10px;
+    font-size: 24px;
+    background-color: antiquewhite;
+  }
+
+  .text {
+    padding: 10px 0 10px 25px;
+    word-wrap: break-word;
+    max-width: 350px;
+    font-size: 24px;
+    position: relative;
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border: 1px solid black;
+      top: 50%;
+      left: 2%;
+
+      transform: translate(2%, -50%);
+    }
+  }
+
+}
